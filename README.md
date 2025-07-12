@@ -1,4 +1,4 @@
-# validar-rut-vicho
+# Validar Rut Chileno | Con diferentes tipos de formatos
 
 Validador de RUT chileno 🇨🇱 hecho en TypeScript.
 

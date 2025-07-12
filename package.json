@@ -1,19 +1,46 @@
 {
-  "name": "validar-rut-vicho",    
-  "version": "1.0.0",
-  "description": "Validador de RUT chileno en TypeScript",
+  "name": "validar-rut-vicho",
+  "version": "1.0.1",
+  "description": "Validador de RUT chileno compatible con JavaScript y TypeScript",
   "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
-    "build": "tsc",
-    "prepublishOnly": "npm run build"
+    "build": "npm run clean && npm run build:cjs && npm run build:esm && npm run copy-esm",
+    "build:cjs": "tsc --project tsconfig.cjs.json",
+    "build:esm": "tsc --project tsconfig.esm.json",
+    "copy-esm": "powershell -Command \"Copy-Item 'dist-esm/index.js' 'dist/index.esm.js'; Remove-Item 'dist-esm' -Recurse\"",
+    "clean": "rimraf dist dist-esm",
+    "prepublishOnly": "npm run build",
+    "test": "node test-simple.js"
   },
   "author": "Vicente Rodríguez",
   "license": "MIT",
-  "keywords": ["rut", "validador", "chile", "typescript", "validar-rut"],
+  "keywords": [
+    "rut",
+    "validador",
+    "chile",
+    "typescript",
+    "javascript",
+    "validar-rut",
+    "chilean-rut"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/vicenterodriguez2002/validar-rut"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.10",
+    "typescript": "^5.8.3"
   }
 }

@@ -1,0 +1,31 @@
+# Source files
+src/
+*.ts
+!*.d.ts
+
+# Config files
+tsconfig*.json
+.vscode/
+.git/
+.gitignore
+
+# Test files
+test-*.js
+test-*.mjs
+*.test.js
+*.test.ts
+test.*
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependencies
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary directories
+dist-esm/

@@ -1,0 +1,19 @@
+{
+  "name": "validar-rut-vicho",    
+  "version": "1.0.0",
+  "description": "Validador de RUT chileno en TypeScript",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "Vicente Rodríguez",
+  "license": "MIT",
+  "keywords": ["rut", "validador", "chile", "typescript", "validar-rut"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vicenterodriguez2002/validar-rut"
+  }
+}

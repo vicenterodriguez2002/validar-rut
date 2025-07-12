@@ -1,6 +1,6 @@
 {
   "name": "validar-rut-vicho",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Validador de RUT chileno compatible con JavaScript y TypeScript",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
